@@ -412,6 +412,14 @@ body {
     box-shadow: var(--shadow);
     overflow: hidden;
     height: 500px;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
 }
 
 .map-placeholder {
@@ -872,4 +880,5 @@ body {
         font-size: 1.8rem;
     }
 }
+
 

@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script
+      src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+      async
+      type="text/javascript"
+    ></script>
 </head>
 <body>
     <!-- Header -->
@@ -214,11 +219,12 @@
                         <h3>📍 Sede Principal</h3>
                         <div class="address">
                             <p><strong>Dirección:</strong></p>
-                            <p>Región del Oriente</p>
-                            <p>Centro de Innovación Tecnológica</p>
+                            <p id="address-line1">Av. 3 Este # 13-33</p>
+                            <p id="address-line2">B. Los Caobos</p>
+                            <p id="address-line3">Cúcuta, Norte de Santander</p>
                         </div>
                         <div class="contact-info">
-                            <p><strong>📞 Teléfono:</strong> +1 (XXX) XXX-XXXX</p>
+                            <p><strong>📞 Teléfono:</strong> 311 2395281</p>
                             <p><strong>✉️ Email:</strong> info@talentotechoriente.com</p>
                             <p><strong>🕒 Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
                         </div>
@@ -235,11 +241,24 @@
                         </ul>
                     </div>
                 </div>
+                <!-- 
+                    Para actualizar el mapa:
+                    1. Ve a Google Maps y busca tu dirección
+                    2. Haz clic en "Compartir" → "Insertar un mapa"
+                    3. Copia la URL del iframe y reemplaza el src de abajo
+                -->
                 <div class="map-container">
-                    <div class="map-placeholder">
-                        <p>🗺️ Mapa Interactivo</p>
-                        <p class="map-note">Aquí se puede integrar Google Maps o un mapa interactivo</p>
-                    </div>
+                    <iframe 
+                        id="google-map"
+                        src="https://www.google.com/maps?q=Av.+3+Este+%2313-33,+Los+Caobos,+C%C3%BAcuta,+Norte+de+Santander&output=embed"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Talento Tech Oriente - Cúcuta">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -514,6 +533,10 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Vapi Widget -->
+    <vapi-widget assistant-id="14176176-a172-41d3-a562-228da0cd150b" public-key="5ea6d53c-4eb0-494a-abfc-c7588b1213bb"></vapi-widget>
 </body>
 </html>
+
 

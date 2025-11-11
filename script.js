@@ -155,3 +155,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Función para actualizar la dirección y el mapa
+// Para usar: actualizarDireccion('Tu dirección completa', 'URL del iframe de Google Maps')
+function actualizarDireccion(direccion, mapaUrl) {
+    // Actualizar dirección en el HTML
+    const addressLines = direccion.split('\n');
+    if (addressLines.length > 0) {
+        document.getElementById('address-line1').textContent = addressLines[0];
+    }
+    if (addressLines.length > 1) {
+        document.getElementById('address-line2').textContent = addressLines[1];
+    }
+    if (addressLines.length > 2) {
+        document.getElementById('address-line3').textContent = addressLines[2];
+    }
+    
+    // Actualizar mapa
+    const mapIframe = document.getElementById('google-map');
+    if (mapIframe && mapaUrl) {
+        mapIframe.src = mapaUrl;
+    }
+}
+
+// Ejemplo de uso:
+// actualizarDireccion('Av. Principal 123\nCol. Centro\nCiudad, Estado 12345', 'https://www.google.com/maps/embed?pb=...');
+
